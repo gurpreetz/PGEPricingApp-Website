@@ -18,19 +18,21 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
+            margin: 0 auto;
             background: white;
             border-radius: 20px;
             padding: 60px 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero {
             text-align: center;
+            margin-bottom: 60px;
         }
 
         .icon {
@@ -50,6 +52,38 @@
             margin-bottom: 40px;
         }
 
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            justify-items: center;
+        }
+
+        .screenshot-wrapper {
+            text-align: center;
+        }
+
+        .screenshot-wrapper img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-wrapper img:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .screenshot-caption {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 500;
+        }
+
         .features {
             text-align: left;
             margin: 40px 0;
@@ -67,6 +101,11 @@
         .feature h3 {
             color: #667eea;
             margin-bottom: 10px;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
         }
 
         .download-btn {
@@ -90,6 +129,7 @@
             padding-top: 30px;
             border-top: 1px solid #eee;
             color: #666;
+            text-align: center;
         }
 
         .contact {
@@ -100,17 +140,55 @@
             color: #667eea;
             text-decoration: none;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .screenshots {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .screenshot-wrapper img {
+                max-width: 240px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="icon">⚡</div>
-        <h1>PGE Pricing</h1>
-        <p class="tagline">Real-time PG&E electricity rates at your fingertips</p>
+        <div class="hero">
+            <div class="icon">⚡</div>
+            <h1>PGE Pricing</h1>
+            <p class="tagline">Real-time PG&E electricity rates at your fingertips</p>
+            <p>Track hourly electricity prices, set custom alerts, and save money on your energy bills with smart scheduling.</p>
+        </div>
 
-        <p>Track hourly electricity prices, set custom alerts, and save money on your energy bills with smart
-            scheduling.</p>
+        <div class="screenshots">
+            <div class="screenshot-wrapper">
+                <img src="images/screenshot1.png" alt="PGE Pricing main dashboard showing hourly rate chart">
+                <p class="screenshot-caption">Real-time pricing dashboard</p>
+            </div>
+            <div class="screenshot-wrapper">
+                <img src="images/screenshot2.png" alt="Statistics view with price analytics">
+                <p class="screenshot-caption">Detailed statistics & insights</p>
+            </div>
+            <div class="screenshot-wrapper">
+                <img src="images/screenshot3.png" alt="Settings screen with customization options">
+                <p class="screenshot-caption">Customizable settings & alerts</p>
+            </div>
+        </div>
 
         <div class="features">
             <div class="feature">
@@ -131,7 +209,9 @@
             </div>
         </div>
 
-        <a href="https://apps.apple.com" class="download-btn">Download on the App Store</a>
+        <div class="download-section">
+            <a href="https://apps.apple.com" class="download-btn">Download on the App Store</a>
+        </div>
 
         <footer>
             <div class="contact">
@@ -139,7 +219,7 @@
                 <p>Need help? Email us at <a href="mailto:gurpreet.appdev@myyahoo.com">gurpreet.appdev@myyahoo.com</a></p>
             </div>
             <p>&copy; 2025 Gurpreet Singh. All rights reserved.</p>
-            <p><a href="privacy.html">Privacy Policy</a></p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="support.html">Support</a></p>
         </footer>
     </div>
 </body>
