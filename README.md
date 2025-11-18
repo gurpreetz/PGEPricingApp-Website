@@ -2,7 +2,7 @@
 
 Official website for PGE Pricing App - a real-time electricity rate tracker for PG&E customers.
 
-**App Store:** [Download on the App Store](#) *(Coming Soon)*
+**App Store:** [Download on the App Store](https://apps.apple.com/us/app/flextricity/id6755277862)
 
 ## About
 
